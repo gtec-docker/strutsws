@@ -1,8 +1,8 @@
 node {
-  stage 'Building'
+  stage 'Staging'
   checkout scm
   def mvnHome = tool 'Maven-3.3.9'
-  stage 'building'
+  stage 'Building'
 	sh "${mvnHome}/bin/mvn install -Ptest" 
   // we want to pick up the version from the pom
   // Mark the code build 'stage'....
