@@ -4,9 +4,7 @@ node {
   def mvnHome = tool 'Maven-3.3.9'
   }
   stage('Building') {
-	sh "${mvnHome}/bin/mvn install -Ptest" 
-  // we want to pick up the version from the pom
-  // Mark the code build 'stage'....
+	sh "${mvnHome}/bin/mvn install -Ptest"
   }
   stage('Cleaning old builde') {
   	sh "sudo docker rm -f strutsWs || true"
