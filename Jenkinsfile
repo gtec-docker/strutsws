@@ -6,7 +6,7 @@ node {
   stage('Building') {
 	  steps {
 	sh "${mvnHome}/bin/mvn install -Ptest"
-	 )	  
+	  }
   }
   stage('Cleaning old builde') {
 	  steps {
